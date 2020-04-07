@@ -34,7 +34,7 @@ requests
 threading
 time
 ```
-### Implementation
+### IMPLEMENTATION
 ```python
 import tor
 import requests
