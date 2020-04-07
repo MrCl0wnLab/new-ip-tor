@@ -39,6 +39,7 @@ time
 import tor
 import requests
 
+# URL LIST TEST
 url_list = [
     'https://www.fbi.gov',
     'http://www.abin.gov.br',
@@ -48,8 +49,14 @@ url_list = [
 ]
 
 for url in url_list:
+    # Exec reboot tor
     tor.new_ip_tor()
-    # tor.DEBUG = True
+    # Send request target
     result = requests.get(url)
     print('[+]', url, result.status_code)
 ```
+### FLAG DEBUG "new identity" IP
+```python
+tor.DEBUG = True
+```
+
