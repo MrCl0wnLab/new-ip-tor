@@ -40,7 +40,7 @@ def kill_tor():
 
 def new_ip_tor():
     while threading.active_count() > 1:
-        time.sleep(0.1)
+        time.sleep(0.5)
     threading.Thread(target=kill_tor).start()
     if DEBUG:
         threading.Thread(target=view_new_ip, args=(HOST_TEST_TOR,)).start()
